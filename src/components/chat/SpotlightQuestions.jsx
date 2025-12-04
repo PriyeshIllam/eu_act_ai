@@ -76,14 +76,14 @@ export default function SpotlightQuestions({ onSelectQuestion, disabled }) {
     return (
         <div className="w-full">
             <div className="flex items-center justify-center gap-2 mb-6">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
                 <div className="flex items-center gap-2 px-4">
                     <Sparkles className="w-4 h-4 text-[#F0B429]" />
-                    <span className="text-sm font-semibold text-slate-600 uppercase tracking-wider">
+                    <span className="text-sm font-semibold text-slate-400 uppercase tracking-wider">
                         Popular Questions
                     </span>
                 </div>
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -97,24 +97,24 @@ export default function SpotlightQuestions({ onSelectQuestion, disabled }) {
                             disabled={disabled}
                             className={cn(
                                 "h-auto p-0 justify-start text-left group overflow-hidden",
-                                "bg-white hover:bg-gradient-to-br hover:from-slate-50 hover:to-white",
-                                "border-slate-200/80 hover:border-[#003399]/40",
+                                "bg-slate-700/30 hover:bg-slate-700/50",
+                                "border-slate-600/50 hover:border-[#F0B429]/40",
                                 "transition-all duration-300 ease-out rounded-2xl",
-                                "hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1",
+                                "hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-1",
                                 "disabled:opacity-50 disabled:cursor-not-allowed",
                                 "animate-in fade-in slide-in-from-bottom-3"
                             )}
                             style={{ animationDelay: `${index * 60}ms`, animationFillMode: 'both' }}
                         >
-                            <div className="flex items-center gap-4 w-full p-4">
+                            <div className="flex items-center gap-3 w-full p-4 sm:p-5">
                                 {/* Icon with gradient background */}
                                 <div className={cn(
-                                    "flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center",
+                                    "flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center",
                                     "bg-gradient-to-br shadow-lg transition-all duration-300",
                                     item.color,
                                     "group-hover:scale-110 group-hover:shadow-xl"
                                 )}>
-                                    <Icon className="w-5 h-5 text-white" />
+                                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                                 </div>
                                 
                                 <div className="flex-1 min-w-0">
@@ -125,13 +125,13 @@ export default function SpotlightQuestions({ onSelectQuestion, disabled }) {
                                     )}>
                                         {item.category}
                                     </span>
-                                    <p className="text-sm font-medium text-slate-700 mt-1 leading-snug group-hover:text-slate-900 transition-colors">
+                                    <p className="text-[13px] sm:text-sm font-medium text-slate-300 mt-1 leading-relaxed group-hover:text-white transition-colors line-clamp-none whitespace-normal break-words">
                                         {item.question}
                                     </p>
                                 </div>
                                 
                                 {/* Arrow indicator */}
-                                <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-[#003399] group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
+                                <ChevronRight className="w-5 h-5 text-slate-500 group-hover:text-[#F0B429] group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 hidden sm:block" />
                             </div>
                         </Button>
                     );

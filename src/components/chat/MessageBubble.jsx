@@ -31,7 +31,7 @@ export default function MessageBubble({ message, isLoading = false }) {
                     "max-w-[75%] rounded-3xl px-6 py-4 transition-all duration-200",
                     isUser 
                         ? "bg-gradient-to-br from-[#003399] to-[#0044aa] text-white shadow-xl shadow-blue-900/20" 
-                        : "bg-white border border-slate-200/80 text-slate-800 shadow-sm"
+                        : "bg-slate-700/50 border border-slate-600/50 text-slate-100 shadow-sm"
                 )}
             >
                 {isUser ? (
@@ -40,21 +40,21 @@ export default function MessageBubble({ message, isLoading = false }) {
                     <ReactMarkdown 
                         className="text-[15px] prose prose-slate max-w-none prose-p:leading-relaxed prose-p:my-2 prose-headings:font-semibold prose-h3:text-base prose-ul:my-2 prose-li:my-0.5 prose-strong:text-slate-900"
                         components={{
-                            p: ({ children }) => <p className="my-2 leading-relaxed text-slate-700">{children}</p>,
-                            strong: ({ children }) => <strong className="font-semibold text-slate-900">{children}</strong>,
-                            ul: ({ children }) => <ul className="my-2 ml-4 space-y-1 list-disc marker:text-[#003399]">{children}</ul>,
-                            ol: ({ children }) => <ol className="my-2 ml-4 space-y-1 list-decimal marker:text-[#003399]">{children}</ol>,
-                            li: ({ children }) => <li className="text-slate-700">{children}</li>,
-                            h1: ({ children }) => <h1 className="text-lg font-bold text-slate-900 mt-4 mb-2">{children}</h1>,
-                            h2: ({ children }) => <h2 className="text-base font-bold text-slate-900 mt-3 mb-2">{children}</h2>,
-                            h3: ({ children }) => <h3 className="text-sm font-semibold text-slate-900 mt-3 mb-1">{children}</h3>,
+                            p: ({ children }) => <p className="my-2 leading-relaxed text-slate-200">{children}</p>,
+                            strong: ({ children }) => <strong className="font-semibold text-white">{children}</strong>,
+                            ul: ({ children }) => <ul className="my-2 ml-4 space-y-1 list-disc marker:text-[#F0B429]">{children}</ul>,
+                            ol: ({ children }) => <ol className="my-2 ml-4 space-y-1 list-decimal marker:text-[#F0B429]">{children}</ol>,
+                            li: ({ children }) => <li className="text-slate-200">{children}</li>,
+                            h1: ({ children }) => <h1 className="text-lg font-bold text-white mt-4 mb-2">{children}</h1>,
+                            h2: ({ children }) => <h2 className="text-base font-bold text-white mt-3 mb-2">{children}</h2>,
+                            h3: ({ children }) => <h3 className="text-sm font-semibold text-white mt-3 mb-1">{children}</h3>,
                             a: ({ children, href }) => (
-                                <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#003399] hover:text-[#0055cc] underline underline-offset-2">
+                                <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#F0B429] hover:text-[#ffc942] underline underline-offset-2">
                                     {children}
                                 </a>
                             ),
                             code: ({ children }) => (
-                                <code className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-800 text-sm font-mono">
+                                <code className="px-1.5 py-0.5 rounded bg-slate-600 text-slate-100 text-sm font-mono">
                                     {children}
                                 </code>
                             ),
