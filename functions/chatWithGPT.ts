@@ -1,10 +1,10 @@
 import { createClientFromRequest } from 'npm:@base44/sdk@0.8.4';
-import OpenAI from 'npm:openai';
+import OpenAI from "openai";
 
 const openai = new OpenAI({
-    apiKey: Deno.env.get("OpenAI"),
-});
-
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+  
 const SYSTEM_PROMPT = `You are an expert AI regulatory consultant specializing in the EU AI Act (Regulation (EU) 2024/1689). Your role is to help users understand how the EU AI Act applies to their AI projects and systems.
 
 Key knowledge areas:
