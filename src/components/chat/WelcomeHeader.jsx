@@ -31,39 +31,39 @@ export default function WelcomeHeader() {
             
             {/* Title with gradient */}
             <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 tracking-tight">
-                <span className="bg-gradient-to-r from-[#003399] via-[#0055cc] to-[#003399] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#F0B429] via-[#ffc942] to-[#F0B429] bg-clip-text text-transparent">
                     EU AI Act
                 </span>
                 <br />
-                <span className="text-slate-800">Classification Assistant</span>
+                <span className="text-white">Classification Assistant</span>
             </h1>
             
             {/* Subtitle */}
-            <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed mb-6">
+            <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-6">
                 Navigate the complexities of AI regulation with confidence. 
                 Get instant guidance on compliance requirements for your AI systems.
             </p>
             
             {/* Feature badges */}
             <div className="flex flex-wrap items-center justify-center gap-3 mb-6">
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#003399]/10 to-[#003399]/5 border border-[#003399]/20">
-                    <Shield className="w-4 h-4 text-[#003399]" />
-                    <span className="text-sm font-medium text-[#003399]">Risk Classification</span>
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-700/50 border border-slate-600/50">
+                    <Shield className="w-4 h-4 text-[#F0B429]" />
+                    <span className="text-sm font-medium text-slate-300">Risk Classification</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#003399]/10 to-[#003399]/5 border border-[#003399]/20">
-                    <Scale className="w-4 h-4 text-[#003399]" />
-                    <span className="text-sm font-medium text-[#003399]">Compliance Check</span>
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-700/50 border border-slate-600/50">
+                    <Scale className="w-4 h-4 text-[#F0B429]" />
+                    <span className="text-sm font-medium text-slate-300">Compliance Check</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#003399]/10 to-[#003399]/5 border border-[#003399]/20">
-                    <FileCheck className="w-4 h-4 text-[#003399]" />
-                    <span className="text-sm font-medium text-[#003399]">Requirements Guide</span>
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-700/50 border border-slate-600/50">
+                    <FileCheck className="w-4 h-4 text-[#F0B429]" />
+                    <span className="text-sm font-medium text-slate-300">Requirements Guide</span>
                 </div>
             </div>
             
             {/* AI badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-50 via-yellow-50 to-amber-50 border border-[#F0B429]/30 shadow-lg shadow-yellow-500/10">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#F0B429]/20 via-amber-500/10 to-[#F0B429]/20 border border-[#F0B429]/30 shadow-lg shadow-amber-500/10">
                 <Sparkles className="w-4 h-4 text-[#F0B429]" />
-                <span className="text-sm font-semibold text-amber-800">
+                <span className="text-sm font-semibold text-[#F0B429]">
                     AI-Powered • Real-time Guidance • Latest 2024 Regulations
                 </span>
             </div>

@@ -47,10 +47,10 @@ export default function ChatInput({ onSend, disabled, placeholder }) {
             )} />
             
             <div className={cn(
-                "relative flex items-end gap-3 p-2 rounded-2xl border bg-white",
-                "shadow-xl shadow-slate-200/50",
+                "relative flex items-end gap-3 p-2 rounded-2xl border bg-slate-700/50",
+                "shadow-xl shadow-black/20",
                 "transition-all duration-300",
-                isFocused ? "border-[#003399]/40 shadow-blue-500/20" : "border-slate-200"
+                isFocused ? "border-[#F0B429]/40 shadow-amber-500/20" : "border-slate-600/50"
             )}>
                 <Textarea
                     ref={textareaRef}
@@ -64,7 +64,7 @@ export default function ChatInput({ onSend, disabled, placeholder }) {
                     className={cn(
                         "flex-1 min-h-[52px] max-h-[150px] resize-none border-0",
                         "focus-visible:ring-0 focus-visible:ring-offset-0",
-                        "placeholder:text-slate-400 text-slate-800",
+                        "placeholder:text-slate-400 text-white",
                         "bg-transparent px-4 py-3 text-[15px] leading-relaxed"
                     )}
                     rows={1}
@@ -93,11 +93,11 @@ export default function ChatInput({ onSend, disabled, placeholder }) {
             </div>
             
             <div className="flex items-center justify-center gap-4 mt-4">
-                <p className="text-xs text-slate-400 flex items-center gap-2">
+                <p className="text-xs text-slate-500 flex items-center gap-2">
                     <Sparkles className="w-3 h-3 text-[#F0B429]" />
-                    Press <kbd className="px-2 py-1 rounded-md bg-slate-100 text-slate-600 font-mono text-[10px] shadow-sm">Enter</kbd> to send
-                    <span className="text-slate-300">•</span>
-                    <kbd className="px-2 py-1 rounded-md bg-slate-100 text-slate-600 font-mono text-[10px] shadow-sm">Shift + Enter</kbd> for new line
+                    Press <kbd className="px-2 py-1 rounded-md bg-slate-700 text-slate-300 font-mono text-[10px] shadow-sm">Enter</kbd> to send
+                    <span className="text-slate-600">•</span>
+                    <kbd className="px-2 py-1 rounded-md bg-slate-700 text-slate-300 font-mono text-[10px] shadow-sm">Shift + Enter</kbd> for new line
                 </p>
             </div>
         </form>
